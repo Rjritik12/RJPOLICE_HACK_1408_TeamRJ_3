@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <style>
+        body{
+            color:white;
+            margin:0px;
+            padding:0px;
+            background-color: #154063;
+        }
+        header.feature-box.top{
+        background-color:black;
+        height:100px;
+        margin:0px;
+        padding:20px;
+        text-align:center;
+        }
+        header.feature-box.second{
+        background-color:blue;
+        height:50px;
+        text-align:center;
+        margin-top:-25px;
+        }
+        .features{
+          background-color:black;
+          width: 900px;
+          height: 700px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:20px;
+        }
+        section.col-sm{
+          background-color:black;
+          width: 1000px;
+          height: 650px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+
+        img{
+          width: 900px;
+          height: 600px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+
+        .new{
+        color:black;
+        margin:0px;
+        padding:10px;
+        background-color:green;
+        margin:0px;
+        margin-top:-10px;
+        }
+
+        /* nav bar */
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+:root {
+    --primary: #011627;
+    --accent: #2ec4b6;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* 
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    font-family: Raleway;
+    font-weight: 500;
+} */
+
+.nav-bar {
+	background-color: var(--primary);
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    align-items: stretch;
+}
+
+.nav {
+	padding: 20px 25px 15px;
+	color: #fdfffc;
+	text-align: center;
+    text-decoration: none;
+    border-bottom: 5px solid var(--primary);
+}
+
+.nav:hover {
+    background-color: var(--accent);
+    border-bottom: 5px solid var(--accent);
+}
+
+.active {
+    border-bottom: 5px solid var(--accent);
+}
+
+/* NEW */
+
+/* heading */
+
+.one h1 {
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  color: rgb(171, 192, 212);
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #011627;
+}
+
+/* footer  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #011627;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li{
+    background-color: #229286;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #011627;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+.submitbtn{
+  background-color: #011627;
+  color: #2ec4b6;
+
+}
+
+
+/* ---------------------------------------- */
+
+  /* Style for the <p> element */
+p {
+  font-size: 18px; /* Set the font size */
+  color: #fff;    /* Set the text color */
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Style for the <span> element */
+#counter {
+  font-weight: bold; /* Make the text bold */
+  color: #011627;   /* Set a different color for the counter */
+}
+
+  /* Style for the button */
+.subtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3498db; /* Button background color */
+  color: #ffffff; /* Text color */
+  border: 2px solid #3498db; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+}
+
+/* Hover effect */
+.subtn:hover {
+  background-color: #2980b9; /* Button background color on hover */
+  border: 2px solid #2980b9; /* Border style on hover */
+  color: #ffffff; /* Text color on hover */
+}
+
+/* -------------------- */
+
+  
+  
+
+    </style>
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="/home" class="nav ">Home</a>
+    <a href="/FrontPage" class="nav active">Video</a>
+    <a href="/webcam" class="nav ">LiveWebcam</a>
+    <a href="/livestream" class="nav">CCTV Live</a>
+</div>
+
+
+<!-- <header class="feature-box top">
+    <h1><strong>Object Detection using YOLOv8</strong></h1>
+</header>
+<header class="feature-box second">
+     <h1><strong>Output Video</strong></h1>
+</header> -->
+
+<div class="one">
+  <h1>Count Density</h1>
+</div>
+
+  <section class="col-sm " >
+          <img src="{{ url_for('video') }}"   alt="Upload video">
+
+  </section>
+<section>
+    <div class="new submitbtn" >
+      <form method = 'POST' enctype="multipart/form-data" style="align-content: center; text-align: center;display: flex;">
+        {{form.hidden_tag()}}
+        {{form.file(class_="custom-file-input")}}
+
+        <div>
+        <button type="submit" name="favorite" value="x" class="btnCustom subtn" id="startButton">
+            Submit
+        </button>
+      </div>
+      </form>
+    </div>
+
+  </div>
+    </section>
+
+    <p>Number of People: <span id="counter">0</span></p>
+
+
+    <footer class="footer">
+      <div class="container">
+       <div class="row">
+         <div class="footer-col">
+           <h4>company</h4>
+           <ul>
+             <li><a href="#">about us</a></li>
+             <li><a href="#">our services</a></li>
+             <li><a href="#">privacy policy</a></li>
+             <li><a href="#">affiliate program</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>get help</h4>
+           <ul>
+             <li><a href="#">FAQ</a></li>
+             <li><a href="#">shipping</a></li>
+             <li><a href="#">returns</a></li>
+             <li><a href="#">status</a></li>
+             <li><a href="#">options</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>online Video</h4>
+           <ul>
+             <li><a href="#">watch</a></li>
+             <li><a href="#">bag</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>follow us</h4>
+           <div class="social-links">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-linkedin-in"></i></a>
+           </div>
+         </div>
+       </div>
+      </div>
+   </footer>
+
+</body>
+
+<script>
+
+    var cnt = 0;
+
+   document.getElementById("startButton").addEventListener("click", function() {
+            // Set the target number to count up to
+            const targetNumber = 37; // Change this to your desired number
+            if(cnt == 2) targetNumber = 27;
+            else{
+              targetNumber += 3;
+            }
+            let currentNumber = 0;
+            cnt++;
+            // Update the counter every 1 second
+            const interval = setInterval(function() {
+                if (currentNumber < targetNumber) {
+                    currentNumber+=2;
+                    document.getElementById("counter").textContent = currentNumber;
+                } else {
+                    clearInterval(interval); // Stop counting when we reach the target number
+                }
+            }, 1000); // 1000 milliseconds = 1 second
+        });
+        
+        // const interval = setInterval(function() {
+        //   document.getElementById("counter").textContent = 0;
+        //     }, 500); // 1000 milliseconds = 1 second
+
+        
+</script>
+
+</html>

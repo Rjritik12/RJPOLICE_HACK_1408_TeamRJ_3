@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ObjectDetection-YOLOv8</title>
+    <style>
+        body{
+        font-family:Helvetica, sans-serif;
+        margin:0px;
+        padding:0px;
+        background-color: #154063;
+        }
+        header.feature-box.right{
+        background-color:black;
+        color:white;
+        height:120px;
+        padding:5px;
+        text-align:right;
+        }
+        header.feature-box.below{
+        height:800px;
+        background-color:blue;
+        margin-top:-30px;
+        background-image:url("../static/images/1.png");
+        background-size:100%;
+        background-position:center;
+        }
+        ul{
+        list-style:none;
+        padding:0px;}
+        li{
+        display:inline-block;
+        background-color:gray;
+        border-radius:10px;
+        padding:10px;
+        margin:10px;
+        }
+        li:hover{
+        background-color:red;
+        margin:10px;
+        }
+        header a{
+        color:white;
+        text-decoration:none;
+        width:100%;
+        }
+        .details{
+        height:80px;
+        margin:40px;
+        padding:0px;
+        font-size:40px;
+        background-color:gray;
+        text-align:center;
+        color:black;
+        }
+
+
+        .features{
+        background:white;
+        color:gray;
+        display:flex;
+        flex-direction:row;
+        padding:20px;
+
+        }
+        .features figure
+        {/*background:pink;*/
+        width:400px;
+        margin:auto;
+        text-align:center;
+        text-transform:uppercase;
+        }
+        .features figure img{
+        border-radius:10%;
+        width:400px;
+        }
+        div.main{
+        display:flex;
+        margin:40px;
+        letter-spacing:1px;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Playfair Display";
+    letter-spacing: 5px;
+        }
+        }
+        .subpart2{
+        text-align:center;
+        text-transform:uppercase;
+        }
+        .subpart2 figure img{
+        border-radius:4%;
+        width:800px;
+        }
+        .contactpage{
+        margin:20px;
+        }
+        #textbox {
+       font-size: 18pt;
+        height: 42px;
+        width : 1000px;
+        }
+        #textboxes {
+       font-size: 18pt;
+        height: 42px;
+        width : 1000px;
+        }
+        footer{
+        background-color:black;
+        text-align:center;
+        margin:0px;
+        padding:0px;
+        color:white;
+        font-size:20px;
+        }
+
+
+        /* nav bar */
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+:root {
+    --primary: #011627;
+    --accent: #2ec4b6;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* 
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    font-family: Raleway;
+    font-weight: 500;
+} */
+
+.nav-bar {
+	background-color: var(--primary);
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    align-items: stretch;
+}
+
+.nav {
+	padding: 20px 25px 15px;
+	color: #fdfffc;
+	text-align: center;
+    text-decoration: none;
+    border-bottom: 5px solid var(--primary);
+}
+
+.nav:hover {
+    background-color: var(--accent);
+    border-bottom: 5px solid var(--accent);
+}
+
+.active {
+    border-bottom: 5px solid var(--accent);
+}
+
+/* NEW */
+
+
+    /* footer --------- */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #011627;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li{
+    background-color: #2ec4b6;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #011627;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/* home ----------- */
+
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Ubuntu|Satisfy&display=swap');
+:root {
+/*   --off-center: -1.75rem; */
+/*   --font-sz: 48px; */
+/*   --off-center: -30px; */
+/*   --font-sz: 100px; */
+  --hw: calc((100vh + 100vw) / 15);
+  --font-sz: var(--hw);
+  --off-center: calc(var(--font-sz) * 1.15 / 2);
+}
+.box {
+  height: 90vh;
+  width: 100wh;
+  margin: 0;
+  background: #012;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: var(--font-sz);
+}
+.grid {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.tile:nth-child(1){ --txt: 'C'; --i: 1;}
+.tile:nth-child(2){ --txt: 'R'; --i: 2;}
+.tile:nth-child(3){ --txt: 'O'; --i: 3;}
+.tile:nth-child(4){ --txt: 'W'; --i: 4;}
+.tile:nth-child(5){ --txt: 'D'; --i: 5;}
+.tile:nth-child(6){ --txt: 'I'; --i: 6;}
+.tile:nth-child(7){ --txt: 'F'; --i: 7;}
+.tile:nth-child(8){ --txt: 'Y'; --i: 8;}
+.tile, .tile::before {
+  margin: -1px;
+  padding: 0px;
+  user-select: none;
+  cursor: pointer;
+}
+.tile {
+  position: relative;
+  background: #3699;
+  background: hsla(calc(var(--i) * 5 + 180), 100%, 30%, 1);
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% var(--off-center);
+  transform: rotate3d(1,0,0,0deg);
+  transition: transform 300ms ease-in-out calc(var(--i) * 20ms);
+}
+.tile::before {
+  content: var(--txt);
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background: hsla(calc(var(--i) * -5 + 0), 100%, 30%, 1);
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% var(--off-center);
+  /* transform: translateZ(var(--off-center)) rotate3d(1,0,0,90deg); */
+  transform: rotate3d(1,0,0,90deg);
+}
+.row:hover .tile {
+  transform: rotate3d(1,0,0,-90deg);
+  transition: transform 300ms ease-in-out calc(var(--i) * 50ms);
+}
+
+/* about section ------- */
+
+    
+.aboutsection{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.about-section{
+    background: url(https://fadzrinmadu.github.io/hosted-assets/responsive-about-us-section-using-html/pic.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #154063;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #154063;
+    color : #fff;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #fff;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- <header class="feature-box right">
+        <nav>
+            <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/FrontPage">Video</a></li>
+            <li><a href="/webcam">LiveWebcam</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <div class="nav-bar">
+        <a href="/home" class="nav active">Home</a>
+        <a href="/FrontPage" class="nav">Video</a>
+        <a href="/webcam" class="nav">LiveWebcam</a>
+        <a href="/livestream" class="nav">CCTV Live</a>
+    </div>
+
+    <!-- commenter ----------------- -->
+
+    <!-- <header class="feature-box below">
+    </header> -->
+
+<!-- 
+    <section class="details">
+        <h1>Sample Results</h1>
+
+    </section>
+    <section class="features">
+        <figure>
+            <img src="../static/images/1.png" alt="YOLOv8 Results 1">
+            <figcaption>YOLOv8 Results 1</figcaption>
+        </figure>
+        <figure>
+            <img src="../static/images/2.png" alt="YOLOv8 Results 2">
+            <figcaption>YOLOv8 Results 2</figcaption>
+        </figure>
+        <figure>
+            <img src="../static/images/3.png" alt="YOLOv8 Results 3">
+            <figcaption>YOLOv8 Results 3</figcaption>
+    </figure>
+    </section>
+    <div class="main">
+        <div class="subpart1">
+            <h1>Object Detection using YOLOv8</h1><br>
+            <h4> FPS of Video</h4>
+            <p>FPS represents the Frame Rate, in case of GPU the FPS will be high while in case of CPU the FPS will be low</p><br>
+            <h4>Shape of Current Frame</h4>
+            <p>The shape of current frame i.e. Resolution will be calculated</p><br>
+            <h4>Detections in Current Frame</h4>
+            <p>Total detections in each of the frame will be calculated</p><br>
+
+        </div>
+
+      <div class="subpart2"><figure>
+      <img src="../static/images/1.png"  alt="Image Missing">
+          <figcaption>Sample Results</figcaption>
+        </figure>
+      </div>
+  </div>
+
+<div class="contactpage">
+    <h1>Contact</h1><br>
+    <p>In case of any query do let me know</p>
+        <form action="/action_page.php" target="_blank" >
+            <p><input type="text" placeholder="Name"  required name="Name"  id="textbox"></p>
+            <p><input type="text" placeholder="Email ID" required name="Email ID" id="textboxes"></p>
+            <p><button type="submit">SEND MESSAGE</button></p>
+        </form>
+</div> -->
+<!-- commenter ----------------- -->
+
+<div id="grid" class="grid box">
+    <div class="row">
+      <div class="tile">C</div>
+      <div class="tile">R</div>
+      <div class="tile">O</div>
+      <div class="tile">W</div>
+      <div class="tile">D</div>
+      <div class="tile">I</div>
+      <div class="tile">F</div>
+      <div class="tile">Y</div>
+    </div>
+  </div>
+
+<!-- about section -------------- -->
+<div class="about-section aboutsection">
+    <div class="inner-container">
+      <h1>About Us</h1>
+      <p class="text">
+       We at Team Explorers are exploring problems and creating solutions for the crowd realted problems faced by organizations
+      </p>
+      <div class="skills">
+        <span>CCTV Surveillance Systems</span>
+        <span>Alerts and Notifications</span>
+        <span>Crowd Detection and Management</span>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">status</a></li>
+           <li><a href="#">options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>online Video</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+</html>
